@@ -1,4 +1,5 @@
 import 'package:flutter_aws_project/app/app_controller.dart';
+import 'package:flutter_aws_project/app/modules/warning/warning_module.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_aws_project/app/app_widget.dart';
@@ -12,7 +13,7 @@ class AppModule extends MainModule {
 
   @override
   List<Router> get routers => [
-        Router(Modular.initialRoute, module: HomeModule()),
+        Router(Modular.initialRoute, module: WarningModule()),
       ];
 
   @override

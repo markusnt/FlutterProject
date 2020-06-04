@@ -20,148 +20,231 @@ class _HomePageState extends ModularState<HomePage, HomeController> {
         title: Text(widget.title),
       ),
       body: Container(
-        color: Theme.of(context).backgroundColor,
-        child: Flex(
-          direction: Axis.vertical,
-          children: <Widget>[
-            SizedBox(height: 10.0),
-            Text(
-              "Quarta, 3 de Junho",
-              style: TextStyle(
-                  // fontFamily: 'Pacifico',
-                fontSize: 22.0,
-                color: Colors.white,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-            SizedBox(height: 25.0),
-            Text(
-              "Boa tarde,",
-              style: TextStyle(
-                  // fontFamily: 'Pacifico',
-                fontSize: 20.0,
-                color: Colors.white,
-                // fontWeight: FontWeight.bold,
-              ),
-            ),
-            SizedBox(height: 5.0),
-            Text(
-              "Markus",
-              style: TextStyle(
-                  // fontFamily: 'Pacifico',
-                fontSize: 18.0,
-                color: Colors.white,
-                // height: 2.0,
-                fontWeight: FontWeight.bold,
-              ),  
-            ),
-            SizedBox(height: 25.0),
-            Text(
-              "AWS CODE",
-              style: TextStyle(
-                  // fontFamily: 'Pacifico',
-                fontSize: 16.0,
-                color: Colors.white,
-                // fontWeight: FontWeight.bold,
-              ),
-            ),
-            SizedBox(height: 5.0),
-            Text(
-              "Rondon Pacheco 1404, Uberlândia-MG",
-              style: TextStyle(
-                  // fontFamily: 'Pacifico',
-                fontSize: 16.0,
-                color: Colors.white,
-                // fontWeight: FontWeight.bold,
-              ),
-            ),
-            SizedBox(height: 5.0),
-            Text(
-              "CNPJ 11111111111111",
-              style: TextStyle(
-                  // fontFamily: 'Pacifico',
-                fontSize: 16.0,
-                color: Colors.white,
-                // fontWeight: FontWeight.bold,
-              ),
-            ),
-            SizedBox(height: 15.0),
-            Container(
-              color: Color(0XFF004C7C),
-              width: double.infinity,
-              // height: 20,
-              child: Flex(
-                direction: Axis.vertical,
-                crossAxisAlignment: CrossAxisAlignment.start,
+          color: Theme.of(context).backgroundColor,
+          child: Flex(
+            direction: Axis.vertical,
+            children: <Widget>[
+              SizedBox(height: 10.0),
+              // SizedBox(height: 25.0),
+              Flex(
+                direction: Axis.horizontal,
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
-                  SizedBox(height: 10.0),
                   Text(
-                    "Controle Diario",
-                      style: TextStyle(
-                        fontSize: 18.0,
-                        color: Colors.white,
-                        fontWeight: FontWeight.bold,
-                      ),
+                    "Boa tarde, ",
+                    style: TextStyle(
+                      fontFamily: 'Ubuntu',
+                      fontSize: 22.0,
+                      color: Colors.white,
+                      // fontWeight: FontWeight.bold,
+                    ),
                   ),
-                  SizedBox(height: 10.0),
-                  Stack(
+                  Text(
+                    "Markus",
+                    style: TextStyle(
+                      // fontFamily: 'Pacifico',
+                      fontSize: 22.0,
+                      color: Colors.white,
+                      // height: 2.0,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ],
+              ),
+
+              SizedBox(height: 20.0),
+
+              Container(
+                color: Color(0XFF004C7C),
+                width: double.infinity,
+                // height: 20,
+                child: Flex(
+                    direction: Axis.vertical,
+                    crossAxisAlignment: CrossAxisAlignment.center,
                     children: <Widget>[
+                      SizedBox(height: 30.0),
                       Container(
-                        margin: EdgeInsets.only(top: 45.0),
-                        width: 200,
-                        height: 30,
-                        padding: EdgeInsets.only(right: 30.0, top: 5.0),
-                        // padding: EdgeInsets.all(5.0),
-                        decoration: BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.only(
-                          topRight: Radius.circular(40.0),
-                          bottomRight: Radius.circular(40.0)),
-                        ),
+                        // mainAxisSize: MainAxisSize.max,
+                        // margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 40.0),
                         child: Text(
-                          "08:00",
-                          textAlign: TextAlign.end,
+                          "Quarta, 3 de Junho",
                           style: TextStyle(
-                            fontSize: 18.0,
-                            color: Color(0XFF2E6DB3),
+                            // fontFamily: Th,,
+                            fontSize: 22.0,
+                            color: Colors.white,
                             fontWeight: FontWeight.bold,
                           ),
                         ),
                       ),
-
                       Container(
-                        padding: EdgeInsets.only(right: 30.0,),
-                        margin: EdgeInsets.only(left: 20.0, top: 5.0),
-                        child: Flex(
-                          direction: Axis.horizontal,
-                          children: <Widget>[
-                            CircleAvatar(
-                              radius: 30,
-                              backgroundColor: Colors.red,
+                        margin: EdgeInsets.only(left: 10.0),
+                        child: Text(
+                          "Controle Diario",
+                          style: TextStyle(
+                            fontSize: 18.0,
+                            color: Colors.white,
+                            // fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ),
+                      SizedBox(height: 10.0),
+                      Stack(
+                        children: <Widget>[
+                          Container(
+                            margin: EdgeInsets.only(top: 45.0),
+                            width: 200,
+                            height: 30,
+                            padding: EdgeInsets.only(right: 30.0, top: 5.0),
+                            // padding: EdgeInsets.all(5.0),
+                            decoration: BoxDecoration(
+                              color: Colors.white,
+                              borderRadius: BorderRadius.only(
+                                  topRight: Radius.circular(40.0),
+                                  bottomRight: Radius.circular(40.0)),
                             ),
-                            Text(
-                              "1º Entrada",
+                            child: Text(
+                              "08:00",
+                              textAlign: TextAlign.end,
                               style: TextStyle(
-                                fontSize: 16.0,
-                                color: Colors.white,
+                                fontSize: 18.0,
+                                color: Color(0XFF2E6DB3),
+                                fontWeight: FontWeight.bold,
                               ),
                             ),
-                          ],
-                        )
+                          ),
+                          Container(
+                              // padding: EdgeInsets.only(right: 30.0,),
+                              margin: EdgeInsets.only(left: 20.0, top: 5.0),
+                              child: Flex(
+                                direction: Axis.horizontal,
+                                children: <Widget>[
+                                  CircleAvatar(
+                                    radius: 30,
+                                    backgroundColor: Colors.red,
+                                  ),
+                                  Container(
+                                    margin: EdgeInsets.only(left: 10.0, bottom: 10.0),
+                                    child: Text(
+                                      "1º Entrada",
+                                      style: TextStyle(
+                                        fontSize: 16.0,
+                                        color: Colors.white,
+                                      ),
+                                    ),
+                                  )
+                                ],
+                              )),
+                        ],
                       ),
-                    ],
-                  ),
-                  SizedBox(height: 40.0),
-                ]
+                      Flex(
+                        direction: Axis.horizontal,
+                        mainAxisAlignment: MainAxisAlignment.end,
+                        children: <Widget>[
+                          Stack(
+                            children: <Widget>[
+                              Container(
+                                margin: EdgeInsets.only(top: 45.0),
+                                width: 200,
+                                height: 30,
+                                padding: EdgeInsets.only(left: 30.0, top: 5.0),
+                                // padding: EdgeInsets.all(5.0),
+                                decoration: BoxDecoration(
+                                  color: Colors.white,
+                                  borderRadius: BorderRadius.only(
+                                      topLeft: Radius.circular(40.0),
+                                      bottomLeft: Radius.circular(40.0)),
+                                ),
+                                child: Text(
+                                  "12:00",
+                                  textAlign: TextAlign.start,
+                                  style: TextStyle(
+                                    fontSize: 18.0,
+                                    color: Color(0XFF2E6DB3),
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                              ),
+                              Container(
+                                  // padding: EdgeInsets.only(right: 30.0,),
+                                  margin: EdgeInsets.only(left: 50.0, top: 5.0),
+                                  child: Flex(
+                                    direction: Axis.horizontal,
+                                    mainAxisSize: MainAxisSize.max,
+                                    children: <Widget>[
+                                      Container(
+                                        margin: EdgeInsets.only(right: 10.0, bottom: 10.0),
+                                        child: Text(
+                                          "1º Saída",
+                                          style: TextStyle(
+                                            fontSize: 16.0,
+                                            color: Colors.white,
+                                          ),
+                                        ),
+                                      ),
+                                      CircleAvatar(
+                                        radius: 30,
+                                        backgroundColor: Colors.red,
+                                      ),
+                                    ],
+                                  )),
+                            ],
+                          ),
+                        ],
+                      ),
+                      SizedBox(height: 40.0),
+                    ]),
               ),
-            ),
-          ],
-        )
-      ),
+              SizedBox(height: 20.0),
+              Flex(
+                direction: Axis.vertical,
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: <Widget>[],
+              ),
+            ],
+          )),
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
         tooltip: 'open_qr',
         child: Icon(Icons.camera),
+      ),
+      bottomNavigationBar: BottomAppBar(
+        child: Container(
+          height: 80.0,
+          child: Column(
+            children: <Widget>[
+              Text(
+                "AWS CODE",
+                style: TextStyle(
+                  // fontFamily: 'Pacifico',
+                  fontSize: 16.0,
+                  color: Colors.white,
+                  // fontWeight: FontWeight.bold,
+                ),
+              ),
+              SizedBox(height: 8.0),
+              Text(
+                "Rondon Pacheco 1404, Uberlândia-MG",
+                style: TextStyle(
+                  // fontFamily: 'Pacifico',
+                  fontSize: 16.0,
+                  color: Colors.white,
+                  // fontWeight: FontWeight.bold,
+                ),
+              ),
+              SizedBox(height: 8.0),
+              Text(
+                "CNPJ 11111111111111",
+                style: TextStyle(
+                  // fontFamily: 'Pacifico',
+                  fontSize: 16.0,
+                  color: Colors.white,
+                  // fontWeight: FontWeight.bold,
+                ),
+              ),
+            ],
+          ),
+        ),
+        color: Theme.of(context).backgroundColor,
       ),
     );
   }
