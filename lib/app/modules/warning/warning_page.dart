@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_aws_project/app/modules/home/home_module.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'warning_controller.dart';
 
@@ -56,7 +57,7 @@ class _WarningPageState extends ModularState<WarningPage, WarningController> {
                   'Home',
                   style: TextStyle(color: Colors.white, fontSize: 16.0),
                 ),
-                onTap: () {},
+                onTap: () {Modular.to.pushNamed('/home');},
               ),
               ListTile(
                 leading: Icon(
@@ -68,7 +69,19 @@ class _WarningPageState extends ModularState<WarningPage, WarningController> {
                   'Avisos',
                   style: TextStyle(color: Colors.white, fontSize: 16.0),
                 ),
-                onTap: () {},
+               onTap: () {Modular.to.pushNamed('/warning');},
+              ),
+              ListTile(
+                leading: Icon(
+                  Icons.person,
+                  color: Colors.white,
+                  size: 35.0,
+                ),
+                title: Text(
+                  'Perfil',
+                  style: TextStyle(color: Colors.white, fontSize: 16.0),
+                ),
+               onTap: () {Modular.to.pushNamed('/profile');},
               ),
               SizedBox(height: 250.0,),
               Container(
@@ -113,7 +126,7 @@ class _WarningPageState extends ModularState<WarningPage, WarningController> {
             Container(
               width: double.infinity,
               decoration: BoxDecoration(
-                color: Color(0XFF004C7C),
+                color: Theme.of(context).primaryColor,
                 border: Border(
                   top: BorderSide(width: 1.5, color: Colors.red),
                 ),
@@ -163,7 +176,7 @@ class _WarningPageState extends ModularState<WarningPage, WarningController> {
             Container(
               width: double.infinity,
               decoration: BoxDecoration(
-                color: Color(0XFF004C7C),
+                color: Theme.of(context).primaryColor,
                 border: Border(
                   top: BorderSide(width: 1.5, color: Colors.red),
                 ),
@@ -181,7 +194,7 @@ class _WarningPageState extends ModularState<WarningPage, WarningController> {
                     height: 35.0,
                     padding: EdgeInsets.only(left: 5.0),
                     decoration: BoxDecoration(
-                      color: Color(0XFF004C7C),
+                      color: Theme.of(context).primaryColor,
                       boxShadow: [
                         BoxShadow(color: Colors.red, spreadRadius: 1),
                       ],

@@ -19,6 +19,104 @@ class _HomePageState extends ModularState<HomePage, HomeController> {
       appBar: AppBar(
         title: Text(widget.title),
       ),
+     drawer: Theme(
+        data: Theme.of(context).copyWith(
+          canvasColor: Colors.transparent,
+        ),
+        child: Drawer(
+          child: ListView(
+            padding: EdgeInsets.zero,
+            children: <Widget>[
+              DrawerHeader(
+                child: Flex(
+                  direction: Axis.vertical,
+                  children: <Widget>[
+                    CircleAvatar(
+                      radius: 40,
+                      backgroundColor: Colors.red,
+                    ),
+                    Text(
+                      'Markus',
+                      style: TextStyle(fontSize: 18.0, color: Colors.white),
+                    ),
+                    Text(
+                      'markus.marques@awscode.com.br',
+                      style: TextStyle(fontSize: 16.0, color: Colors.white),
+                    ),
+                  ],
+                ),
+              ),
+              ListTile(
+                leading: Icon(
+                  Icons.home,
+                  color: Colors.white,
+                  size: 35.0,
+                ),
+                title: Text(
+                  'Home',
+                  style: TextStyle(color: Colors.white, fontSize: 16.0),
+                ),
+                onTap: () {Modular.to.pushNamed('/home');},
+              ),
+              ListTile(
+                leading: Icon(
+                  Icons.notifications,
+                  color: Colors.white,
+                  size: 35.0,
+                ),
+                title: Text(
+                  'Avisos',
+                  style: TextStyle(color: Colors.white, fontSize: 16.0),
+                ),
+               onTap: () {Modular.to.pushNamed('/warning');},
+              ),
+              ListTile(
+                leading: Icon(
+                  Icons.person,
+                  color: Colors.white,
+                  size: 35.0,
+                ),
+                title: Text(
+                  'Perfil',
+                  style: TextStyle(color: Colors.white, fontSize: 16.0),
+                ),
+               onTap: () {Modular.to.pushNamed('/profile');},
+              ),
+              SizedBox(height: 250.0,),
+              Container(
+                decoration: BoxDecoration(
+                  // color: Color(0XFF004C7C),
+                  border: Border(
+                    top: BorderSide(width: 1.0, color: Colors.white),
+                  ),
+                ),
+                child: Flex(
+                  direction: Axis.vertical,
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: <Widget>[
+                    ListTile(
+                      leading: Icon(
+                        Icons.exit_to_app,
+                        color: Colors.white,
+                        size: 35.0,
+                      ),
+                      title: Text(
+                        'Sair',
+                        style: TextStyle(color: Colors.white, fontSize: 16.0),
+                      ),
+                      onTap: () {},
+                    ),
+                    CircleAvatar(
+                      radius: 40,
+                      backgroundColor: Colors.red,
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ), // Populate the Drawer in the next step.
+        ),
+      ),
       body: Container(
           color: Theme.of(context).backgroundColor,
           child: Flex(
@@ -55,7 +153,7 @@ class _HomePageState extends ModularState<HomePage, HomeController> {
               SizedBox(height: 20.0),
 
               Container(
-                color: Color(0XFF004C7C),
+                color: Theme.of(context).primaryColor,
                 width: double.infinity,
                 // height: 20,
                 child: Flex(
