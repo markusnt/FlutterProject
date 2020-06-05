@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_aws_project/app/modules/home/home_module.dart';
 import 'package:flutter_modular/flutter_modular.dart';
-import 'warning_controller.dart';
 
 class WarningPage extends StatefulWidget {
   final String title;
@@ -11,10 +9,8 @@ class WarningPage extends StatefulWidget {
   _WarningPageState createState() => _WarningPageState();
 }
 
-class _WarningPageState extends ModularState<WarningPage, WarningController> {
-  //use 'controller' variable to access controller
-
-  @override
+class _WarningPageState extends State<WarningPage> {
+   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
@@ -35,6 +31,7 @@ class _WarningPageState extends ModularState<WarningPage, WarningController> {
                     CircleAvatar(
                       radius: 40,
                       backgroundColor: Colors.red,
+                      backgroundImage: NetworkImage('https://lh3.googleusercontent.com/ykuq3KjWWVgwt9fV1zh1ZzAhXJF6pKV5tbUGH0BZIBBP5yIICcavfO-knvLifR1rv0uBiEnlngw=w640-h400-e365'),
                     ),
                     Text(
                       'Markus',
@@ -83,7 +80,7 @@ class _WarningPageState extends ModularState<WarningPage, WarningController> {
                 ),
                onTap: () {Modular.to.pushNamed('/profile');},
               ),
-              SizedBox(height: 250.0,),
+              SizedBox(height: 200.0,),
               Container(
                 decoration: BoxDecoration(
                   // color: Color(0XFF004C7C),
@@ -110,6 +107,7 @@ class _WarningPageState extends ModularState<WarningPage, WarningController> {
                     CircleAvatar(
                       radius: 40,
                       backgroundColor: Colors.red,
+                      backgroundImage: NetworkImage('https://lh3.googleusercontent.com/ykuq3KjWWVgwt9fV1zh1ZzAhXJF6pKV5tbUGH0BZIBBP5yIICcavfO-knvLifR1rv0uBiEnlngw=w640-h400-e365'),
                     ),
                   ],
                 ),

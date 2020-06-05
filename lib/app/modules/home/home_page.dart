@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
-import 'home_controller.dart';
 
 class HomePage extends StatefulWidget {
   final String title;
@@ -10,10 +9,8 @@ class HomePage extends StatefulWidget {
   _HomePageState createState() => _HomePageState();
 }
 
-class _HomePageState extends ModularState<HomePage, HomeController> {
-  //use 'controller' variable to access controller
-
-  @override
+class _HomePageState extends State<HomePage> {
+ @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
@@ -34,6 +31,7 @@ class _HomePageState extends ModularState<HomePage, HomeController> {
                     CircleAvatar(
                       radius: 40,
                       backgroundColor: Colors.red,
+                      backgroundImage: NetworkImage('https://lh3.googleusercontent.com/ykuq3KjWWVgwt9fV1zh1ZzAhXJF6pKV5tbUGH0BZIBBP5yIICcavfO-knvLifR1rv0uBiEnlngw=w640-h400-e365'),
                     ),
                     Text(
                       'Markus',
@@ -82,7 +80,7 @@ class _HomePageState extends ModularState<HomePage, HomeController> {
                 ),
                onTap: () {Modular.to.pushNamed('/profile');},
               ),
-              SizedBox(height: 250.0,),
+              SizedBox(height: 200.0,),
               Container(
                 decoration: BoxDecoration(
                   // color: Color(0XFF004C7C),
@@ -109,6 +107,7 @@ class _HomePageState extends ModularState<HomePage, HomeController> {
                     CircleAvatar(
                       radius: 40,
                       backgroundColor: Colors.red,
+                      backgroundImage: NetworkImage('https://lh3.googleusercontent.com/ykuq3KjWWVgwt9fV1zh1ZzAhXJF6pKV5tbUGH0BZIBBP5yIICcavfO-knvLifR1rv0uBiEnlngw=w640-h400-e365'),
                     ),
                   ],
                 ),
@@ -219,6 +218,7 @@ class _HomePageState extends ModularState<HomePage, HomeController> {
                                   CircleAvatar(
                                     radius: 30,
                                     backgroundColor: Colors.red,
+                                    backgroundImage: NetworkImage('https://lh3.googleusercontent.com/ykuq3KjWWVgwt9fV1zh1ZzAhXJF6pKV5tbUGH0BZIBBP5yIICcavfO-knvLifR1rv0uBiEnlngw=w640-h400-e365'),
                                   ),
                                   Container(
                                     margin: EdgeInsets.only(left: 10.0, bottom: 10.0),
@@ -282,6 +282,7 @@ class _HomePageState extends ModularState<HomePage, HomeController> {
                                       CircleAvatar(
                                         radius: 30,
                                         backgroundColor: Colors.red,
+                                        backgroundImage: NetworkImage('https://lh3.googleusercontent.com/ykuq3KjWWVgwt9fV1zh1ZzAhXJF6pKV5tbUGH0BZIBBP5yIICcavfO-knvLifR1rv0uBiEnlngw=w640-h400-e365'),
                                       ),
                                     ],
                                   )),

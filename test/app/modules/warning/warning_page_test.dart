@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:flutter_modular/flutter_modular_test.dart';
 
-import 'package:flutter_aws_project/app/modules/warning/warning_page.dart';
+import 'package:flutter_aws_projectRx/app/modules/warning/warning_page.dart';
 
 main() {
   testWidgets('WarningPage has title', (WidgetTester tester) async {

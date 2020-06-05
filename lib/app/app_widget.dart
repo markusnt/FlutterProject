@@ -8,7 +8,6 @@ class AppWidget extends StatelessWidget {
       navigatorKey: Modular.navigatorKey,
       title: 'Flutter Slidy',
       theme: ThemeData(
-        fontFamily: 'Ubuntu',
         primaryColor: Color(0XFF313e60),
         accentColor: Color(0XFF2E6DB3),
         backgroundColor: Color(0XFF2A3656),

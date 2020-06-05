@@ -1,4 +1,4 @@
-# flutter_aws_project
+# flutter_aws_projectRx
 
 A new Flutter project. Created by Slidy
 

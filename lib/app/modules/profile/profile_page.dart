@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
-import 'profile_controller.dart';
 
 class ProfilePage extends StatefulWidget {
   final String title;
@@ -10,9 +9,7 @@ class ProfilePage extends StatefulWidget {
   _ProfilePageState createState() => _ProfilePageState();
 }
 
-class _ProfilePageState extends ModularState<ProfilePage, ProfileController> {
-  //use 'controller' variable to access controller
-
+class _ProfilePageState extends State<ProfilePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -34,6 +31,7 @@ class _ProfilePageState extends ModularState<ProfilePage, ProfileController> {
                     CircleAvatar(
                       radius: 40,
                       backgroundColor: Colors.red,
+                      backgroundImage: NetworkImage('https://lh3.googleusercontent.com/ykuq3KjWWVgwt9fV1zh1ZzAhXJF6pKV5tbUGH0BZIBBP5yIICcavfO-knvLifR1rv0uBiEnlngw=w640-h400-e365'),
                     ),
                     Text(
                       'Markus',
@@ -89,13 +87,13 @@ class _ProfilePageState extends ModularState<ProfilePage, ProfileController> {
                 },
               ),
               SizedBox(
-                height: 250.0,
+                height: 200.0,
               ),
               Container(
                 decoration: BoxDecoration(
                   // color: Color(0XFF004C7C),
                   border: Border(
-                    top: BorderSide(width: 10.0, color: Colors.white),
+                    top: BorderSide(width: 1.0, color: Colors.white),
                   ),
                 ),
                 child: Flex(
@@ -117,6 +115,7 @@ class _ProfilePageState extends ModularState<ProfilePage, ProfileController> {
                     CircleAvatar(
                       radius: 40,
                       backgroundColor: Colors.red,
+                      backgroundImage: NetworkImage('https://lh3.googleusercontent.com/ykuq3KjWWVgwt9fV1zh1ZzAhXJF6pKV5tbUGH0BZIBBP5yIICcavfO-knvLifR1rv0uBiEnlngw=w640-h400-e365'),
                     ),
                   ],
                 ),
@@ -137,6 +136,7 @@ class _ProfilePageState extends ModularState<ProfilePage, ProfileController> {
               CircleAvatar(
                 radius: 50.0,
                 backgroundColor: Colors.red,
+                backgroundImage: NetworkImage('https://lh3.googleusercontent.com/ykuq3KjWWVgwt9fV1zh1ZzAhXJF6pKV5tbUGH0BZIBBP5yIICcavfO-knvLifR1rv0uBiEnlngw=w640-h400-e365'),
               ),
               SizedBox(height: 20.0),
               Text(
@@ -152,134 +152,202 @@ class _ProfilePageState extends ModularState<ProfilePage, ProfileController> {
                     children: <Widget>[
                       SizedBox(height: 20.0),
                       Container(
-                        width: double.infinity,
-                        color: Colors.red,
-                        margin: EdgeInsets.symmetric(vertical: 5.0, horizontal: 10.0),
+                        // width: double.infinity,
+                        // color: Colors.green,
                         child: Flex(
                           direction: Axis.horizontal,
-                          crossAxisAlignment: CrossAxisAlignment.end,
+                          mainAxisAlignment: MainAxisAlignment.center,
                           children: <Widget>[
                             Container(
-                              color: Colors.blue,
-                              width: 100.0,
+                              // color: Colors.blue,
+                              width: 150.0,
                               child: Text(
                                 'Cidade',
                                 textAlign: TextAlign.start,
-                                style:
-                                    TextStyle(color: Colors.white, fontSize: 16.0),
+                                style: TextStyle(
+                                    color: Colors.white, fontSize: 16.0),
                               ),
                             ),
                             Container(
+                              // color: Colors.red,
+                              width: 150.0,
                               child: Text(
                                 'Uberlândia-MG',
                                 textAlign: TextAlign.end,
-                                style:
-                                    TextStyle(color: Colors.white, fontSize: 16.0,),
+                                style: TextStyle(
+                                  color: Colors.white24,
+                                  fontSize: 16.0,
+                                ),
                               ),
                             ),
                           ],
                         ),
                       ),
                       SizedBox(height: 20.0),
-                      Flex(
-                        direction: Axis.horizontal,
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        children: <Widget>[
-                          SizedBox(width: 10.0),
-                          Text(
-                            'Empresa',
-                            style:
-                                TextStyle(color: Colors.white, fontSize: 16.0),
-                          ),
-                          Text(
-                            'AWS CODE',
-                            style:
-                                TextStyle(color: Colors.white, fontSize: 16.0),
-                          ),
-                          SizedBox(width: 10.0),
-                        ],
+                      Container(
+                        child: Flex(
+                          direction: Axis.horizontal,
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: <Widget>[
+                            Container(
+                              // color: Colors.blue,
+                              width: 150.0,
+                              child: Text(
+                                'Empresa',
+                                textAlign: TextAlign.start,
+                                style: TextStyle(
+                                    color: Colors.white, fontSize: 16.0),
+                              ),
+                            ),
+                            Container(
+                              // color: Colors.red,
+                              width: 150.0,
+                              child: Text(
+                                'AWS CODE',
+                                textAlign: TextAlign.end,
+                                style: TextStyle(
+                                  color: Colors.white24,
+                                  fontSize: 16.0,
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
                       ),
                       SizedBox(height: 20.0),
-                      Flex(
-                        direction: Axis.horizontal,
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        children: <Widget>[
-                          SizedBox(width: 10.0),
-                          Text(
-                            'Cargo',
-                            style:
-                                TextStyle(color: Colors.white, fontSize: 16.0),
-                          ),
-                          Text(
-                            'Desenvolvedor',
-                            style:
-                                TextStyle(color: Colors.white, fontSize: 16.0),
-                          ),
-                          SizedBox(width: 10.0),
-                        ],
+                      Container(
+                        child: Flex(
+                          direction: Axis.horizontal,
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: <Widget>[
+                            Container(
+                              // color: Colors.blue,
+                              width: 150.0,
+                              child: Text(
+                                'Cargo',
+                                textAlign: TextAlign.start,
+                                style: TextStyle(
+                                    color: Colors.white, fontSize: 16.0),
+                              ),
+                            ),
+                            Container(
+                              // color: Colors.red,
+                              width: 150.0,
+                              child: Text(
+                                'Desenvolvedor',
+                                textAlign: TextAlign.end,
+                                style: TextStyle(
+                                  color: Colors.white24,
+                                  fontSize: 16.0,
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
                       ),
                       SizedBox(height: 20.0),
-                      Flex(
-                        direction: Axis.horizontal,
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        children: <Widget>[
-                          SizedBox(width: 10.0),
-                          Text(
-                            'CPF',
-                            style:
-                                TextStyle(color: Colors.white, fontSize: 16.0),
-                          ),
-                          Text(
-                            '000.000.000-00',
-                            style:
-                                TextStyle(color: Colors.white, fontSize: 16.0),
-                          ),
-                          SizedBox(width: 10.0),
-                        ],
+                      Container(
+                        child: Flex(
+                          direction: Axis.horizontal,
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: <Widget>[
+                            Container(
+                              // color: Colors.blue,
+                              width: 150.0,
+                              child: Text(
+                                'CPF',
+                                textAlign: TextAlign.start,
+                                style: TextStyle(
+                                    color: Colors.white, fontSize: 16.0),
+                              ),
+                            ),
+                            Container(
+                              // color: Colors.red,
+                              width: 150.0,
+                              child: Text(
+                                '000.000.000-00',
+                                textAlign: TextAlign.end,
+                                style: TextStyle(
+                                  color: Colors.white24,
+                                  fontSize: 16.0,
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
                       ),
                       SizedBox(height: 20.0),
-                      Flex(
-                        direction: Axis.horizontal,
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        children: <Widget>[
-                          SizedBox(width: 10.0),
-                          Text(
-                            'Telefone',
-                            style:
-                                TextStyle(color: Colors.white, fontSize: 16.0),
-                          ),
-                          Text(
-                            '(00) 0 0000-0000',
-                            style:
-                                TextStyle(color: Colors.white, fontSize: 16.0),
-                          ),
-                          SizedBox(width: 10.0),
-                        ],
+                      Container(
+                        child: Flex(
+                          direction: Axis.horizontal,
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: <Widget>[
+                            Container(
+                              // color: Colors.blue,
+                              width: 150.0,
+                              child: Text(
+                                'Telefone',
+                                textAlign: TextAlign.start,
+                                style: TextStyle(
+                                    color: Colors.white, fontSize: 16.0),
+                              ),
+                            ),
+                            Container(
+                              // color: Colors.red,
+                              width: 150.0,
+                              child: Text(
+                                '(00) 0 0000-0000',
+                                textAlign: TextAlign.end,
+                                style: TextStyle(
+                                  color: Colors.white24,
+                                  fontSize: 16.0,
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
                       ),
                       SizedBox(height: 20.0),
-                      Flex(
-                        direction: Axis.horizontal,
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        children: <Widget>[
-                          SizedBox(width: 10.0),
-                          Text(
-                            'Data de admissão',
-                            style:
-                                TextStyle(color: Colors.white, fontSize: 16.0),
-                          ),
-                          Text(
-                            '00/00/0000',
-                            style:
-                                TextStyle(color: Colors.white, fontSize: 16.0),
-                          ),
-                          SizedBox(width: 10.0),
-                        ],
+                      Container(
+                        child: Flex(
+                          direction: Axis.horizontal,
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: <Widget>[
+                            Container(
+                              // color: Colors.blue,
+                              width: 150.0,
+                              child: Text(
+                                'Data de admissão',
+                                textAlign: TextAlign.start,
+                                style: TextStyle(
+                                    color: Colors.white, fontSize: 16.0),
+                              ),
+                            ),
+                            Container(
+                              // color: Colors.red,
+                              width: 150.0,
+                              child: Text(
+                                '00/00/0000',
+                                textAlign: TextAlign.end,
+                                style: TextStyle(
+                                  color: Colors.white24,
+                                  fontSize: 16.0,
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
                       ),
                       SizedBox(height: 20.0),
                     ],
                   )),
             ],
           )),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        tooltip: 'open_qr',
+        child: Icon(Icons.camera),
+      ),
     );
   }
 }

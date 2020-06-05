@@ -1,5 +1,5 @@
 lib/app/modules/warning/warning_module.dart
 lib/app/modules/warning/warning_page.dart
 test/app/modules/warning/warning_page_test.dart
-lib/app/modules/warning/warning_controller.dart
-test/app/modules/warning/warning_controller_test.dart
+lib/app/modules/warning/warning_bloc.dart
+test/app/modules/warning/warning_bloc_test.dart
