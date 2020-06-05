@@ -15,9 +15,9 @@ class AppModule extends MainModule {
   @override
   List<Router> get routers => [
         Router(Modular.initialRoute, module: HomeModule()),
-        Router('/warning', module: WarningModule()),
-        Router('/home', module: HomeModule()),
-        Router('/profile', module: ProfileModule()),
+        Router('/warning', module: WarningModule(), transition: TransitionType.noTransition),
+        Router('/home', module: HomeModule(), transition: TransitionType.noTransition),
+        Router('/profile', module: ProfileModule(), transition: TransitionType.noTransition),
       ];
   @override
   Widget get bootstrap => AppWidget();
